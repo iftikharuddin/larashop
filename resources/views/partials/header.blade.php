@@ -18,12 +18,14 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user" aria-hidden="true"></i> User Account <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">User Account</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="{{ url('user/signup') }}">Sign Up</a></li>
-                        <li><a href="{{ url('user/signin') }}">Sign In</a></li>
-                        <li><a href="{{ url('user/profile') }}">Profile</a></li>
-                        <li><a href="{{ url('user/logout') }}">Logout</a></li>
+                        @if(Auth::check())
+							<li><a href="{{ url('user/profile') }}">Profile</a></li>
+							<li><a href="{{ url('user/logout') }}">Logout</a></li>
+						@else
+							<li role="separator" class="divider"></li>
+							<li><a href="{{ url('user/signup') }}">Sign Up</a></li>
+							<li><a href="{{ url('user/signin') }}">Sign In</a></li>
+                        @endif
                     </ul>
                 </li>
             </ul>
