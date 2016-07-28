@@ -12,3 +12,5 @@
 */
 
 Route::get('/','ProductController@getIndex');
+Route::get('/signup','UserController@getSignup');
+Route::post('/signup','UserController@postSignup');
