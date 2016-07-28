@@ -17,7 +17,7 @@
 
 				</div>
 			@endif
-			<form action="{{ url('signup') }}" method="post">
+			<form action="{{ url('user/signup') }}" method="post">
 				{{ csrf_field() }}
 				<div class="form-group">
 					<label for="email">E-Mail</label>
