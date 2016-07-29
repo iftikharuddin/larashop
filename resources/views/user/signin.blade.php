@@ -31,6 +31,7 @@
 				<button type="submit" class="btn btn-primary">Sign In</button>
 				
 			</form>
+			<p> Don't have an Account? <a href="{{ url('user/signin') }}">Sign Up</a></p>
 		</div>
 
 	</div>

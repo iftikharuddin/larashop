@@ -16,8 +16,8 @@ Route::get('/','ProductController@getIndex');
 Route::get('/add-to-cart/{id}','ProductController@getAddToCart');
 Route::get('/shopping-cart','ProductController@getCart');
 
-Route::get('/checkout', 'ProductController@getCheckout');
-Route::post('/checkout', 'ProductController@postCheckout');
+Route::get('/checkout', ['uses' => 'ProductController@getCheckout', 'middleware' => 'auth' ]);
+Route::post('/checkout', ['uses' => 'ProductController@postCheckout', 'middleware' => 'auth' ]);
 
 Route::group(['prefix' => 'user'], function(){
 	Route::group(['middleware' => 'guest'], function(){
