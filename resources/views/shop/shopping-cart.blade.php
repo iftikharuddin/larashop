@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('title')
-    Laravel Shopping Cart
+    Laravel Shopping Cart 
 @endsection
 
 @section('content')
@@ -37,7 +37,7 @@
 		<hr>
 		<div class="row">
 			<div class="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3">
-				<button type="button" class="btn btn-success">Checkout</button>
+				<a href="{{ url('checkout') }}" type="button" class="btn btn-success">Checkout</a>
 			</div>
 		</div>
 	@else
