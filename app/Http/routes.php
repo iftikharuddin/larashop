@@ -13,6 +13,8 @@
 
 
 Route::get('/','ProductController@getIndex');
+Route::get('/add-to-cart/{id}','ProductController@getAddToCart');
+Route::get('/shopping-cart','ProductController@getCart');
 
 Route::group(['prefix' => 'user'], function(){
 	Route::group(['middleware' => 'guest'], function(){
