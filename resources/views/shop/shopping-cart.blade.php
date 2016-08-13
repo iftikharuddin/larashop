@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('title')
-    Laravel Shopping Cart 
+    Shopping Cart Section 
 @endsection
 
 @section('content')
@@ -43,7 +43,7 @@
 	@else
 		<div class="row">
 			<div class="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3">
-				<h2>No Items in the cart!</h2>
+				<h2>There is no Items in the cart!</h2>
 			</div>
 		</div>
 	@endif
